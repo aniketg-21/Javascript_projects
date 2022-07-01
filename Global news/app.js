@@ -1,5 +1,5 @@
 let newsAcc = document.getElementById('newsAcc');
-let apiKey = '79544f59e2af413f87da03b9aacc7132';
+let apiKey = 'YOUR_API_KEY_HERE';
 
 const xhr = new XMLHttpRequest();
 xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`, true);
