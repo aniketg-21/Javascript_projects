@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="digitalClock">
+        <b><span id="clock"></span></b>
+      </div>
+
+      <div class="stopWatch">
+        <span id="sw">00:00:00</span>
+        <hr>
+        <div class="btns">
+          <button id="play" onclick="startTimer()">▶️</button>
+          <button id="reset" onclick="reset()">⟳</button>
+        </div>
+      </div>
+
+      <div class="alarmClock">
+        <h2>Alarm Clock:</h2>
+        <input type="time" id="alarm" step="1" />
+        <button id="r_btn">
+          <b><i>Set Alarm</i></b>
+        </button>
+        <button id="s_btn">
+          <b>OFF</b>
+        </button>
+      </div>
+
+      <div class="analogclock">
+        <div id="hr_hand"></div>
+        <div id="min_hand"></div>
+        <div id="sec_hand"></div>
+        <div id="bg_dot"></div>
+        <div id="dot"></div>
+      </div>
+    </div>
+  </body>
+  <script src="My Clock.js"></script>
+</html>

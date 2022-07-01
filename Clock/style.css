@@ -1,0 +1,140 @@
+.container {
+  margin: 2em;
+  height: 80vh;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#clock {
+  font-size: 26px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  /* background-color: rgb(122,222,68); */
+  border: 5px outset rgb(54, 166, 15);
+  padding: 6px 6px;
+  color: snow;
+  text-shadow: 2px 2px black;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.stopWatch {
+  position: relative;
+  padding: 0.5em 1em 1em 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+#sw {
+  font-size: xxx-large;
+  font-family: system-ui;
+}
+.stopWatch hr {
+  margin: 0;
+}
+.btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btns button {
+  font-size: x-large;
+  background-color: transparent;
+  border: none;
+}
+#reset {
+  font-size: larger;
+  padding: 0 2px;
+  width: 26px;
+  height: 24px;
+  border-radius: 0.2em;
+  color: white;
+  background-color: #00a6ed;
+}
+#play:hover {
+  text-shadow: 1px 2px 6px grey;
+}
+#reset:hover {
+  box-shadow: 1px 2px 6px grey;
+}
+
+.alarmClock {
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.alarmClock h2 {
+  margin-top: 0;
+}
+.alarmClock button {
+  padding: 0.25em;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+#r_btn {
+  background-color: greenyellow;
+}
+#s_btn {
+  color: white;
+  background-color: red;
+}
+button:active {
+  box-shadow: none;
+}
+
+.analogclock {
+  float: right;
+  border: 5px solid black;
+  border-radius: 60%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: url("clock_img.png") center center/cover;
+}
+#hr_hand,
+#min_hand,
+#sec_hand,
+#bg_dot,
+#dot {
+  width: 0;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 6px;
+  transform-origin: bottom;
+}
+#bg_dot {
+  top: 48.2%;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+#dot {
+  top: 48.7%;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+}
+#hr_hand {
+  width: 1px;
+  background: black;
+  height: 20%;
+  top: 29%;
+}
+#min_hand {
+  height: 30%;
+  top: 19%;
+}
+#sec_hand {
+  height: 34%;
+  top: 15%;
+  border-color: red;
+}

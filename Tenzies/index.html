@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tenzies</title>
+    <link rel="icon" href="game_logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="center">
+    <div class="container center">
+      <h1 class="ff-cursive">TENZIES</h1>
+      <p id="rules" class="border">
+        Roll until all dice have same number. Click on die to freeze it at its
+        current value.
+      </p>
+      <p class="sub-heading border">
+        Rolled dice <b><span id="rolled">0</span></b> times.
+      </p>
+      <div class="dice">
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+        <button onclick="freeze(this)">0</button>
+      </div>
+      <div id="game_over" class="center">
+        <h1>Game Over!!!</h1>
+      </div>
+      <div class="btns center">
+        <span id="highscore">🏆<span id="score">00</span></span>
+        <button id="roll" onclick="roll()">Roll</button>
+        <button id="reset" onclick="reset()">⟳</button>
+      </div>
+      <h4 class="ff-cursive border">
+        Just in case you're wondering, the odds of getting all ten dice to land
+        on one number in one roll are 10,077,697 to 1.
+      </h4>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

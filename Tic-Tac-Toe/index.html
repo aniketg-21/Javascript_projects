@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Games</title>
+    <link rel="icon" href="images/game_logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navBar">
+        <a id="nav-title">Tic-Tac-Toe</a>
+        <button type="button" id="settings"><img src="images/settings.png"></button>
+    </nav>
+    <div class="modal">
+        <h2 id="modal_title">Player's Name</h2>
+        <span id="close">&times;</span>
+        <hr>
+        <form name="settingsForm" id="settingsForm">
+          <div class="modal_body">
+            <div class="row">
+              <label for="player_1_Name">Player 1 :</label>
+              <input type="text" name="player_1_Name" id="player_1_Name" value="Jimmy">
+            </div>
+            <div class="row">
+              <label for="player_2_Name">Player 2 :</label>
+              <input type="text" name="player_2_Name" id="player_2_Name" value="Smith">
+            </div>
+            <h3>Select the below for Player 1:</h3>
+            <div class="row">
+              <div class="choices">
+                <input type="radio" name="player1Choice" id="choseX" checked>
+                <label for="choseX">X</label>
+                <input type="radio" name="player1Choice" id="choseO">
+                <label for="choseO">O</label>
+              </div>
+              <div class="choices">
+                <input type="radio" name="turn" id="turn1" checked>
+                <label for="turn1">1st Turn</label>
+                <input type="radio" name="turn" id="turn2">
+                <label for="turn2">2nd Turn</label>
+              </div>
+            </div>
+            <div class="row">
+              Background Music : 
+              <div style="display: flex; align-items: center;">
+                <label class="switchBox">
+                  <input
+                  type="checkbox"
+                  name="switch"
+                    value="1"
+                    id="switch"
+                    class="switch"
+                    onchange="this.parentNode.style.backgroundColor = this.checked ? 'blue' : 'white'"
+                    />                
+                </label>
+                <span>N</span> 
+              </div>              
+            </div>
+            <button type="submit" id="apply">Apply changes</button>
+          </div>
+        </form>
+    </div>
+    <div id="content">
+      <div class="history">
+        <h1>Welcome to Tic Tac Toe</h1>
+        <p>Tic-Tac-Toe is a long beloved classic pen and paper or board game for two players. Variations of Tic Tac Toe have been played since the Roman Empire and 3 in a row games can be traced all the way back to ancient Egypt!
+        Tic Tac Toe is known by a few other names around the world. The most common of these is "Noughts and Crosses" and it is sometimes simply referred to as the "XO game."</p>
+      </div>
+
+      <div class="container">
+        <div class="board">
+          <table rules="all" id='board'>
+            <tr>
+              <td><button class="myBtn"></button></td>
+              <td><button class="myBtn"></button></td>
+              <td><button class="myBtn"></button></td>
+            </tr>
+            <tr>
+              <td><button class="myBtn"></button></td>
+              <td><button class="myBtn"></button></td>
+              <td><button class="myBtn"></button></td>
+            </tr>
+            <tr>
+              <td><button class="myBtn"></button></td>
+              <td><button class="myBtn"></button></td>
+              <td><button class="myBtn"></button></td>
+            </tr>
+          </table>
+          <h2 id="player_won"></h2>
+        </div>
+
+        <hr id="line">
+
+        <div class="box">
+          <div class="box2">
+            <h2 id="turn">Player (X)'s turn</h2>
+            <button id="reset">New game</button>
+          </div>
+          <table rules="all" class="score_board">
+            <tr>
+              <td><h2 id="player_1">Player 'X'</h2></td>
+              <td><h2>Tie!!!</h2></td>
+              <td><h2 id="player_2">Player 'O'</h2></td>
+            </tr>
+            <tr class="score">
+              <td><h2 id="xWins">0</h2></td>
+              <td><h2 id="tie">0</h2></td>
+              <td><h2 id="oWins">0</h2></td>
+            </tr>
+          </table>
+          <div class="myVideo">
+            <img src="images/winner.gif" id="winner">
+            <img src="images/tie.gif" id="tieGif">
+          </div>
+          <audio src="Lets_Go-David_Renda.mp3" id="bg_music"></audio>
+          <audio src="click.wav" id="selected"></audio>
+        </div>
+      </div>
+
+      <div class="rules">
+        <h3>RULES OF THE GAME</h3>
+        <ol>
+          <li>Tic-Tac-Toe is a simple and fun game for 2 players, X and O.It is played on a 3x3 grid.</li>
+          <li>Choose your opponent.</li>
+          <li>Press a square to place your mark.</li>
+          <li>Typically, X starts first, So player 1 is assigned with X by default and thus player 2 plays with O as his mark.</li>
+          <li>Players take turns placing their Mark, X or O, on an open square in the grid. The first player to make 3 of their own mark in a row vertically, horizontally, or diagonally wins the game.</li>
+          <li>If all 9 squares are filled and neither player has 3 in a row, the game is considered a Tie.</li>
+          <li>Use the new game button to play again.</li>
+          <li>Reload the page to reset score board.</li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h1 data-text="Password Generator">Password Generator</h1>
+          </div>
+          <div class="screen">
+            <input
+              type="text"
+              name="password"
+              placeholder="Password here"
+              readonly
+            />
+            <button id="copy" onclick="copy()">
+              <img src="copy_icon.gif" width="28" height="28" />
+            </button>
+          </div>
+          <div class="options">
+            <div class="col">
+              <label for="">Password Length</label>
+              <input type="number" name="len" value="4" id="len" />
+            </div>
+            <div class="col">
+              <label for="">Numbers</label>
+              <input type="checkbox" name="numbers" />
+            </div>
+            <div class="col">
+              <label for="">Uppercase characters</label>
+              <input type="checkbox" name="uppercase" />
+            </div>
+            <div class="col">
+              <label for="">Lowercase characters</label>
+              <input type="checkbox" name="lowercase" />
+            </div>
+            <div class="col">
+              <label for="">Special characters</label>
+              <input type="checkbox" name="specialChar" />
+            </div>
+          </div>
+          <button id="reset" onclick="reset()">reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

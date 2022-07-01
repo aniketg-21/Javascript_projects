@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Form</title>
+    <style>
+      body {
+        background: url('bg_img.jpg') center center/cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center m-2 mb-3">Hostel Admission Form</h1>
+      <form class="row g-3" name="regForm" onsubmit="return validateForm()">
+        <div class="col-md-4">
+          <label for="fname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name">
+          <span class="text-danger ps-2 formError" id="fname_error" hidden="true"></span>
+        </div>
+        <div class="col-md-4">
+          <label for="mname" class="form-label">Middle Name</label>
+          <input type="text" class="form-control" id="mname" name="mname" placeholder="Enter middle name">
+          <span class="text-danger ps-2 formError" id="mname_error" hidden="true"></span>
+        </div>
+        <div class="col-md-4">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name">
+          <span class="text-danger ps-2 formError" id="lname_error" hidden="true"></span>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+          <span class="text-danger ps-2 formError" id="email_error" hidden="true"></span>
+        </div>
+        <div class="col-md-2">
+          <label for="dob" class="form-label">Date Of Birth</label>
+          <input type="date" class="form-control" id="dob" name="dob">
+          <span class="text-danger ps-2 formError" id="dob_error" hidden="true"></span>
+        </div>
+        <div class="col-md-4">
+          <label for="phoneNo" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phoneNo" name="phoneNo" placeholder="Enter mobile number">
+          <span class="text-danger ps-2 formError" id="phoneNo_error" hidden="true"></span>
+        </div>
+        <div class="col-md-5">
+          <label for="uname" class="form-label">University Name</label>
+          <input type="text" class="form-control" id="uname" name="uname" placeholder="ex COEP">
+          <span class="text-danger ps-2 formError" id="uname_error" hidden="true"></span>
+        </div>
+        <div class="col-md-5">
+          <label for="cname" class="form-label">Course Name</label>
+          <input type="text" class="form-control" id="cname" name="cname" placeholder="ex Engineering">
+          <span class="text-danger ps-2 formError" id="cname_error" hidden="true"></span>
+        </div>
+        <div class="col-md-2">
+          <label for="cyear" class="form-label">Course Year</label>
+          <select class="form-select" id="cyear" aria-label="Default select example" required>
+            <option value="0" selected disabled hidden="true">Select</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+            <option value="5">Fifth Year</option>
+          </select>
+          <span class="text-danger ps-2 formError" id="cyear_error" hidden="true"></span>
+        </div>
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter address"></textarea>
+          <span class="text-danger ps-2 formError" id="address_error" hidden="true"></span>
+        </div>
+        <div class="col-md-6">
+          <label for="pass" class="form-label">Password</label>
+          <input type="text" class="form-control" id="pass" name="pass" placeholder="Enter password" style="-webkit-text-security: disc;">
+          <span class="text-danger ps-2 formError" id="pass_error" hidden="true"></span>
+        </div>
+        <div class="col-md-6">
+          <label for="cpassword4" class="form-label">Confirm Password</label>
+          <input type="text" class="form-control" id="cpassword" name="password" placeholder="Confirm password" style="-webkit-text-security: disc;">
+          <span class="text-danger ps-2 formError" id="cpass_error" hidden="true"></span>
+        </div>
+        <div class="col-12">
+          <button type="submit" id="submit_val" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

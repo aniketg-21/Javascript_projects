@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="icon" href="images/game_logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal" tabindex="-1">
+      <div class="modal-body">
+        <p><b>Congratulations!</b>🥳 You found all the matching pairs 💯.</p>
+        <p>
+          It took you a total of
+          <b><span class="attempts">0</span></b> attempts.
+        </p>
+        <p>
+          And <b><span class="time">00:00</span></b> minutes:seconds to find all.
+        </p>
+        <button id="play-again" onclick="reset()">Play again</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>How good is your memory?</h1>
+      <div class="board">
+        <div class="col">
+          <span>Attempts</span><span class="attempts">0</span>
+        </div>
+        <div class="col">
+          <span>Level</span>
+          <select name="" onchange="levelChanged(this)">
+            <optgroup>
+              <option value="Easy" selected>Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="col row">
+          <button id="reset" onclick="reset()">↺</button>
+          <div class="col">
+            <span>Time</span><span class="time">00:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="game-container"></div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

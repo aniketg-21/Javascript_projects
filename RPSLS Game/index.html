@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPSLS</title>
+    <link rel="icon" href="images/game_logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors Lizard Spock</h1>
+    <h2 id="result_text">Game Mode On</h2>
+    <div class="col">
+      <div id="default" class="col">
+        <p>Got Bored?</p>
+        <p>Play this for a round or two.</p>
+      </div>
+      <div class="board">
+        <div class="col">
+          <img src="" id="user" />
+          <span>You</span>
+        </div>
+        <div class="col" hidden>
+          <img src="" id="comp" />
+          <span>Computer</span>
+        </div>
+      </div>
+
+      <div class="choices col">
+        <button class="btn">
+          <img src="images/Rock.png" /><span>Rock</span>
+        </button>
+        <button class="btn">
+          <img src="images/Paper.png" /><span>Paper</span>
+        </button>
+        <button class="btn">
+          <img src="images/Scissors.png" /><span>Scissors</span>
+        </button>
+        <button class="btn">
+          <img src="images/Lizard.png" /><span>Lizard</span>
+        </button>
+        <button class="btn">
+          <img src="images/Spock.png" /><span>Spock</span>
+        </button>
+      </div>
+      <h4>⬆️ Choose your move ⬆️</h4>
+
+      <table class="score_board col">
+        <thead>
+          <th>Score Board</th>
+          <th><button id="reset" onclick="reset()">↺</button></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Won :</td>
+            <td>0</td>
+            <td>Tie :</td>
+            <td>0</td>
+            <td>Lost :</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <audio src="click.wav" id="clicked"></audio>
+      <audio src="Big_bang_theory_Theme.mp3" id="bg_music"></audio>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

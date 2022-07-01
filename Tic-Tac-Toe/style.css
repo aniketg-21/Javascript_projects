@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+}
+body {
+  cursor: default;
+  background: url('images/tic_tac_toe.jpg') center center/cover;
+}
+.navBar {
+  background-color: black;
+  padding: 12px;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+#nav-title {
+  text-decoration: none;
+  font: 28px bold;
+  color: white;
+}
+#settings {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  position: sticky;
+  top: 10%;
+}
+#settings:hover {
+  transform: rotate(360deg);
+  transition: transform 2s;
+}
+#settings, #settings img {
+  width: 32px;
+  height: 32px;
+}
+.modal {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.9);
+  border-radius: 8px;
+  display: none;
+  animation: transparentEffect 4s;
+}
+#close {
+  position: absolute;
+  top: 0%;
+  left: 88%;
+  font-size: xxx-large;
+}
+#close:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 3px 2px white);
+}
+#modal_title {
+  margin: 10px;
+}
+.modal_body {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+.row {
+  margin: 4px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row > input {
+  font-size: inherit;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 6px;
+}
+.row > input:focus {
+  outline-color: orange;
+}
+.modal_body h3 {
+  color: orange;
+  font-family: cursive;
+  padding-left: 4px;
+}
+.switchBox {
+  width: 38px;
+  height: 20px;
+  padding: 2px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border-radius: 18px;
+  background-color: white;
+}
+#switch {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%;
+  background-color: black;
+  transition: all .5s;
+}
+#switch:checked {
+  transform: translateX(18px);
+} 
+#apply {
+  margin: 6px;
+  font-size: inherit;
+  align-self: center;
+  width: fit-content;
+  font-family: cursive;
+  background-color: inherit;
+  color: orange;
+  border-radius: 6px;
+  border: 2px solid orange;
+}
+.container {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+.board {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  animation: loading_board 4s;
+}
+#board {
+  z-index: 0;
+  filter: drop-shadow(2px 6px 8px black);
+}
+#player_won {
+  z-index: -1;
+  position: absolute;
+  top: 86%;
+}
+#line {
+  display: none;
+  margin-top: 20px;
+  width: -webkit-fill-available;
+}
+.box {
+  padding-left: 40px;
+  animation: loading_score 4s;
+}
+.box2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 4px;
+}
+.score_board {
+  margin-top: 10px;
+  border: 2px solid black;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: -webkit-fill-available;
+}
+.score_board h2 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.myBtn {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border: none;
+  font: 42px bold;
+}
+.myBtn:hover {
+  background-color: skyblue;
+}
+td {
+  border: 2px solid black;
+}
+h2 {
+  font-family: cursive;
+  color: orange;
+}
+h1 {
+  font-family: 'Trash Hand';
+}
+img {
+  width: 0px;
+}
+.myVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #64d9d6;
+}
+#reset {
+  background-color: orange;
+  font: 22px bold;
+  font-family: cursive;
+  padding: 4px;
+  border-radius: 6px;
+}
+.rules h3 {
+  padding-left: 30px;
+}
+.rules {
+  font-size: 16px;
+  margin: 20px;
+  padding: 8px;
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.6);
+  animation: loading_rules 8s;
+}
+.history {
+  margin: 20px;
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  animation-name: loading_history;
+  animation-duration: 8s;
+}
+
+@keyframes transparentEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes game_over {
+  from {transform: translateY(0);}
+  to {transform: translateY(-35px);}
+}
+@keyframes new_game {
+  from {transform: scale(0.5,0.5);}
+  to {transform: scale(1.2, 1.2);}
+}
+@keyframes loading_board {
+  from {transform: translate(-300px,0);}
+  to {transform: translate(0, 0);}
+}
+@keyframes loading_score {
+  from {transform: translate(450px,0);}
+  to {transform: translate(0, 0);}
+}
+@keyframes loading_history {
+  from {color: transparent; background: transparent;}
+  to {color: black; background: rgba(255, 255, 255, 0.8);}
+}
+@keyframes loading_rules {
+  from {color: transparent; background: transparent;}
+  to {color: white; background: rgba(0, 0, 0, 0.6);}
+}
+
+@media screen and (max-width: 475px){
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    padding: 0px;
+    padding-top: 20px;
+  }
+  #line {
+    display: block;
+  }
+}
