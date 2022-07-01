@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-DO List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <hr />
+      <div class="main">
+        <div class="aside-left">
+          <div class="card">
+            <h3>TOP 3 PRIORITIES</h3>
+            <hr />
+            <ol type="1" class="top-pr">
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>TO DO ✅</h3>
+            <hr />
+            <ul type="circle" class="to-do">
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>NOTES 📕</h3>
+            <hr />
+            <textarea cols="30" rows="6" class="note"></textarea>
+          </div>
+        </div>
+        <div class="aside-right">
+          <div class="card">
+            <h3>DAILY SCHEDULED 📅</h3>
+            <hr />
+            <table rules="cols" class="scheduled">
+              <thead>
+                <th>Time</th>
+                <th>Activity</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" contentedittable /></td>
+                  <td><input type="text" contentedittable /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>IN PROGRESSℴℴℴ</h3>
+            <hr />
+            <ul type="circle" class="in-prog">
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+              <li><input type="text" contentedittable /></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>TOOLS 🧰</h3>
+            <hr />
+            <div class="tools">
+              <button id="set-skin" onclick="showSkins()">Set Skin</button>
+              <div class="skins">
+                <img src="images/paper_texture.jpg" />
+                <img src="images/skin_1.jpg" />
+                <img src="images/skin_2.jpg" />
+                <img src="images/skin_3.jpg" />
+                <img src="images/skin_4.jpg" />
+              </div>
+              <button onclick="removeCompleted()">Remove ✅</button>
+              <button onclick="reset()">Clear</button>
+            </div>
+            <hr />
+            <div class="quote">
+              <img
+                id="quote"
+                src="images/quote.png"
+                alt="new day fresh start"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

@@ -1,0 +1,142 @@
+body,
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+.container {
+  margin: 2rem;
+  box-shadow: 1px 2px 4px black;
+  color: firebrick;
+  background: 0 url("images/paper_texture.jpg");
+}
+.main {
+  display: flex;
+  padding-bottom: 1em;
+}
+.aside-left,
+.aside-right {
+  width: 50%;
+}
+h1,
+h3 {
+  margin: 0;
+  padding-top: 0.5em;
+}
+h3 {
+  padding-bottom: 0.5em;
+  background: 0 url("images/paper_texture.jpg");
+}
+hr {
+  margin: 0;
+  height: 2px;
+  border-radius: 4px;
+  background-color: white;
+}
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid rgba(68, 65, 65, 0.5);
+  font-size: 18px;
+  margin-top: 0.1em;
+  margin-right: 1em;
+  width: -webkit-fill-available;
+  outline-color: transparent;
+}
+textarea {
+  margin: 0.5em;
+}
+ol,
+ul {
+  padding-bottom: 1em;
+}
+.card,
+.skins {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px black;
+}
+.card {
+  margin: 1rem;
+  position: relative;
+  overflow-x: auto;
+}
+.scheduled {
+  width: -webkit-fill-available;
+}
+th {
+  border: 1px solid rgba(68, 65, 65, 0.5);
+}
+.scheduled input {
+  margin: 1px;
+}
+.scheduled td:first-child {
+  width: 25%;
+}
+.scheduled td:nth-child(odd) input {
+  width: 92%;
+  font-size: medium;
+}
+h1,
+h3,
+.scheduled td:nth-child(odd) input {
+  text-align: center;
+}
+.tools {
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.tools button {
+  cursor: pointer;
+  margin: 2px;
+  font-family: cursive;
+  color: white;
+  background-color: black;
+  border-radius: 0 0.5em 0.5em 0;
+  border-left: 0.25em solid gray;
+}
+.tools button:active {
+  border: 0;
+  transform: translateX(-2px);
+}
+.skins {
+  padding: .5em;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  display: none;
+}
+.skins::before {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  left: 12%;
+  border: 0.26em solid;
+  border-color: white transparent transparent transparent;
+}
+.skins img {
+  width: 32px;
+  height: 32px;
+}
+.skins img:hover {
+  width: 86px;
+  height: 86px;
+  top: 0;
+  position: absolute;
+  box-shadow: 1px 2px 4px black;
+}
+#quote {
+  filter: drop-shadow(2px 2px 8px);
+}
+
+@media screen and (max-width: 475px) {
+  .main {
+    display: block;
+  }
+  .aside-left,
+  .aside-right {
+    width: auto;
+  }
+}
