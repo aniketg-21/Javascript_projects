@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        A simple quiz application in which contains a set of 10 questions.
+      </h1>
+      <div class="card">
+        <h1 class="card-title">Test your Knowledge 🤓</h1>
+        <div class="card-body">
+          <h2 id="ques">Question</h2>
+          <ul type="none" class="options">
+            <li>
+              <input type="radio" name="opt" value="Option a" />
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="opt" value="Option b" />
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="opt" value="Option c" />
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="opt" value="Option d" />
+              <label></label>
+            </li>
+          </ul>
+        </div>
+        <button id="0" onclick="nextObj(this.id)">Next</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

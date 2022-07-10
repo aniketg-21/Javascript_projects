@@ -1,0 +1,89 @@
+{
+  "SpotTheAns": [
+    {
+      "id": 1,
+      "question": " _______ refers to the process of locating and removing the errors in a program.",
+      "options": ["Analyzing", "Correcting", "Debugging", "Executing"],
+      "answer": "Debugging"
+    },
+    {
+      "id": 2,
+      "question": "A pointer is ________________",
+      "options": [
+        "The address of a variable",
+        "An indication of the variable to be accessed next",
+        "A variable for storing addresses",
+        "The data type of an address variable"
+      ],
+      "answer": "A variable for storing addresses"
+    },
+    {
+      "id": 3,
+      "question": "The name of a function ends with _______",
+      "options": ["Double quotes", "Single quotes", "Parenthesis", "#"],
+      "answer": "Parenthesis"
+    },
+    {
+      "id": 4,
+      "question": "The feature that allows the same operations to be carried out differently depending on the object is ________",
+      "options": ["Polymorphism", "Polygamy", "Inheritane", "Multitasking"],
+      "answer": "Polymorphism"
+    },
+    {
+      "id": 5,
+      "question": "If you declare two objects as Customer firstCust, secondCust; which of the following must be true?",
+      "options": [
+        "Each object will store a separate copy of any static member data",
+        "Each object will store a separate copy of any member functions",
+        "Each object will store a separate copy of any nonstatic data members",
+        "You cannot declare two objects of the same class"
+      ],
+      "answer": "Each object will store a separate copy of any nonstatic data members"
+    },
+    {
+      "id": 6,
+      "question": "Inheritance is the principle that _______",
+      "options": [
+        "Classes with the same name must be derived from one another",
+        "Knowledge of a general category can be applied to more specific objects",
+        "C++ functions may be used only if they have logical predecessors",
+        "One function name may invoke different methods"
+      ],
+      "answer": "Knowledge of a general category can be applied to more specific objects"
+    },
+    {
+      "id": 7,
+      "question": "User-defined functions can be _______",
+      "options": [
+        "Value-returning functions only",
+        "Void functions only",
+        "Either value-returning or void functions",
+        "None of these"
+      ],
+      "answer": "Either value-returning or void functions"
+    },
+    {
+      "id": 8,
+      "question": "A function that is called automatically each time an object is created is a(n)",
+      "options": ["Constructor", "Contractor", "Builder", "Architect"],
+      "answer": "Constructor"
+    },
+    {
+      "id": 9,
+      "question": "If you assign a default value to any variable in a function prototype's parameter list, then _______",
+      "options": [
+        "All other parameters in the function prototype must have default values",
+        "All parameters to the right of that variable must have default values",
+        "All parameters to the left of that variable must have default values",
+        "No other parameters in that prototype can have default values"
+      ],
+      "answer": "All parameters to the right of that variable must have default values"
+    },
+    {
+      "id": 10,
+      "question": "A function that is called automatically each time an object is destroyed is a _______",
+      "options": ["Constructor", "Destructor", "Destroyer", "Terminator"],
+      "answer": "Destructor"
+    }
+  ]
+}

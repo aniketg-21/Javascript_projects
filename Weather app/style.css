@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.jc-between {
+  display: flex;
+  justify-content: space-between;
+}
+.b {
+  font-weight: bold;
+}
+.g {
+  gap: 1.8em;
+}
+.w-80 {
+  width: 80px;
+}
+.visible_img {
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  cursor: default;
+}
+body {
+  background: url("images/bg_img.jpg") center center/cover no-repeat;
+}
+abbr {
+  text-decoration: none;
+}
+input {
+  cursor: text;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.25em 1em;
+  border-radius: 2em;
+}
+.info {
+  padding: 1.5em;
+  flex-wrap: wrap;
+}
+#city {
+  font-size: xxx-large;
+}
+#date-time {
+  font-weight: 100;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1em;
+  padding: 1em 0.25em !important;
+}
+.cards {
+  padding: 1em;
+  display: flex;
+  gap: 1.5em;
+  overflow-x: auto;
+}
+.card {
+  gap: 0.5em;
+  padding: 1em;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.65);
+  box-shadow: 0 2px 8px rgb(255, 255, 255, 0.25);
+}
+.card img:not([alt="Humidity"]):not([alt="Temperature"]) {
+  margin-right: 0.5em;
+}
+.card img:is([alt="Pressure"]) {
+  border: 2px solid rgb(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.card img:is([src="images/loading.png"]) {
+  width: 64px;
+  padding: 2em;
+}
+.day {
+  padding: 0 1.5em;
+  margin: 0 0.75em 0.5em;
+  width: max-content;
+  color: black;
+  background-color: yellow;
+}
+#desc {
+  margin-top: 0.25em;
+  padding: 0 0.5em;
+  border: 1px solid white;
+}
+body::-webkit-scrollbar,
+.cards::-webkit-scrollbar {
+  width: 0 !important;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
